@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trucker's Budget — Track Your Miles, Master Your Money</title>
+    <meta name="description" content="The all-in-one expense, income, and mileage tracker built for truck drivers. For owner-operators and company drivers.">
+    <link rel="canonical" href="https://truckersbudget.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://truckersbudget.com/">
+    <meta property="og:title" content="Trucker's Budget — Track Your Miles, Master Your Money">
+    <meta property="og:description" content="The all-in-one expense, income, and mileage tracker built for truck drivers. For owner-operators and company drivers.">
+    <meta property="og:image" content="https://truckersbudget.com/og-image.png">
+    <meta property="og:site_name" content="Trucker's Budget">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trucker's Budget — Track Your Miles, Master Your Money">
+    <meta name="twitter:description" content="The all-in-one expense, income, and mileage tracker built for truck drivers. For owner-operators and company drivers.">
+    <meta name="twitter:image" content="https://truckersbudget.com/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg:#0C0F14;--surface:#151921;--surface-2:#1C2230;--border:#2A3040;--border-hover:#3D4A60;--text:#E8ECF4;--text-muted:#8892A6;--accent:#F59E0B;--accent-hover:#FBBF24;--accent-glow:rgba(245,158,11,0.15);--accent-glow-strong:rgba(245,158,11,0.25);--green:#22C55E;--blue:#3B82F6;--red:#EF4444;--purple:#A855F7;--cyan:#06B6D4}
+        html{overflow-x:hidden}body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+        .skip-link{position:absolute;top:-100%;left:16px;background:var(--accent);color:#000;padding:12px 24px;border-radius:8px;font-weight:600;font-size:0.9rem;z-index:1000;text-decoration:none;transition:top 0.2s}
+        .skip-link:focus{top:16px}
+        *:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}.fade-in{opacity:1!important;transform:none!important}}
+        .fade-in{opacity:0;transform:translateY(24px);animation:fadeUp 0.7s ease-out forwards}
+        .fade-in.d1{animation-delay:0.1s}.fade-in.d2{animation-delay:0.2s}.fade-in.d3{animation-delay:0.3s}.fade-in.d4{animation-delay:0.4s}.fade-in.d5{animation-delay:0.5s}
+        @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+        .container{max-width:960px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+        nav{padding:24px 0;display:flex;align-items:center;justify-content:space-between}
+        .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+        .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),#D97706);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+        .logo-text{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--text)}
+        .nav-links{display:flex;gap:32px}
+        .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
+        .nav-links a:hover{color:var(--text)}
+        .menu-toggle{display:none;background:none;border:1px solid var(--border);border-radius:8px;padding:8px;cursor:pointer;color:var(--text);transition:border-color 0.2s}
+        .menu-toggle:hover{border-color:var(--text-muted)}
+        .menu-toggle svg{width:22px;height:22px;display:block}
+        .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(12,15,20,0.97);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:8px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+        .mobile-nav.open{display:flex}
+        .mobile-nav a{color:var(--text);text-decoration:none;font-size:1.3rem;font-weight:500;padding:16px 32px;border-radius:12px;transition:background 0.2s,color 0.2s}
+        .mobile-nav a:hover{background:var(--surface);color:var(--accent)}
+        .mobile-nav-close{position:absolute;top:24px;right:24px;background:none;border:1px solid var(--border);border-radius:8px;padding:8px;cursor:pointer;color:var(--text)}
+        .mobile-nav-close svg{width:22px;height:22px;display:block}
+        .hero{padding:100px 0 80px;text-align:center}
+        .badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:8px 20px;font-size:0.85rem;color:var(--text-muted);margin-bottom:32px}
+        .badge-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+        h1{font-family:'DM Serif Display',serif;font-size:clamp(2.5rem,6vw,4rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:24px}
+        h1 .highlight{background:linear-gradient(135deg,var(--accent),#FBBF24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero-sub{font-size:1.15rem;color:var(--text-muted);max-width:540px;margin:0 auto 40px;line-height:1.7}
+        .signup-form{max-width:460px;margin:0 auto 12px;display:flex;gap:10px}
+        .signup-form input[type="email"]{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;font-family:inherit;font-size:1rem;color:var(--text);outline:none;transition:border-color 0.2s,box-shadow 0.2s;min-width:0}
+        .signup-form input[type="email"]::placeholder{color:var(--text-muted)}
+        .signup-form input[type="email"]:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+        .signup-form .btn-primary{white-space:nowrap;flex-shrink:0}
+        .signup-msg{text-align:center;font-size:0.85rem;min-height:22px}
+        .signup-msg.success{color:var(--green)}.signup-msg.error{color:var(--red)}
+        .hero-buttons{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px}
+        .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#000;padding:16px 36px;border-radius:12px;font-weight:600;font-size:1rem;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:transform 0.2s,box-shadow 0.2s,background 0.2s;box-shadow:0 0 30px var(--accent-glow)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 50px var(--accent-glow-strong);background:var(--accent-hover)}
+        .btn-primary:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+        .btn-primary svg{width:20px;height:20px}
+        .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);padding:16px 32px;border-radius:12px;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid var(--border);transition:border-color 0.2s,background 0.2s}
+        .btn-secondary:hover{border-color:var(--text-muted);background:var(--surface)}
+        .btn-secondary svg{width:16px;height:16px}
+        .trust-line{margin-top:24px;font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;justify-content:center;gap:20px}
+        .trust-line span{display:flex;align-items:center;gap:6px}
+        .trust-line svg{width:14px;height:14px;color:var(--green);flex-shrink:0}
+        .preview-section{padding:20px 0 80px}
+        .phone-strip{display:flex;gap:24px;justify-content:center;align-items:flex-start;overflow:hidden}
+        .phone-mock{width:220px;flex-shrink:0;background:#000;border:2px solid #333;border-radius:36px;padding:12px 10px 14px;transition:transform 0.4s ease,border-color 0.3s;position:relative}
+        .phone-mock:hover{transform:translateY(-8px);border-color:var(--accent)}
+        .phone-notch{width:76px;height:22px;background:#000;border-radius:20px;margin:0 auto 10px;border:2px solid #1a1a1a}
+        .phone-mock-inner{background:var(--surface-2);border-radius:20px;padding:20px 16px;min-height:340px;display:flex;flex-direction:column;gap:12px}
+        .phone-home{width:100px;height:4px;background:#444;border-radius:4px;margin:8px auto 0}
+        .mock-header{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:4px}
+        .mock-title{font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:8px}
+        .mock-bar{height:8px;border-radius:4px;background:var(--border)}
+        .mock-bar.fill-green{background:linear-gradient(90deg,var(--green),#4ADE80)}
+        .mock-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:0.8rem}
+        .mock-row:last-child{border-bottom:none}
+        .mock-row .label{color:var(--text-muted)}.mock-row .value{font-weight:600;color:var(--text)}.mock-row .value.positive{color:var(--green)}
+        .mock-stat{text-align:center;padding:12px 0}
+        .mock-stat .num{font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--accent)}
+        .mock-stat .unit{font-size:0.75rem;color:var(--text-muted);margin-top:2px}
+        .mock-chip{display:inline-block;padding:4px 10px;border-radius:100px;font-size:0.7rem;font-weight:600}
+        .mock-chip.green{background:rgba(34,197,94,0.12);color:var(--green)}
+        .phone-caption{text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:12px;font-weight:500}
+        .section-label{text-align:center;font-size:0.8rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+        .section-title{text-align:center;font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:12px}
+        .section-subtitle{text-align:center;color:var(--text-muted);font-size:1rem;max-width:520px;margin:0 auto 56px;line-height:1.6}
+        .how-it-works{padding:80px 0 60px}
+        .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+        .step{text-align:center;padding:32px 24px}
+        .step-number{width:52px;height:52px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);display:inline-flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--accent);margin-bottom:20px;box-shadow:0 0 20px var(--accent-glow)}
+        .step h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+        .step p{font-size:0.9rem;color:var(--text-muted);line-height:1.6}
+        .steps-grid::before,.steps-grid::after{content:'';position:absolute;top:57px;height:2px;background:linear-gradient(90deg,transparent,var(--border),transparent);pointer-events:none}
+        .steps-grid::before{left:16.6%;right:50%}.steps-grid::after{left:50%;right:16.6%}
+        .features{padding:60px 0 80px}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+        .feature-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px 28px;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;position:relative;overflow:hidden}
+        .feature-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;opacity:0;transition:opacity 0.3s}
+        .feature-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+        .feature-card:hover::after{opacity:1}
+        .feature-card:nth-child(1)::after{background:linear-gradient(90deg,var(--accent),var(--accent-hover))}
+        .feature-card:nth-child(2)::after{background:linear-gradient(90deg,var(--red),#F87171)}
+        .feature-card:nth-child(3)::after{background:linear-gradient(90deg,var(--blue),#60A5FA)}
+        .feature-card:nth-child(4)::after{background:linear-gradient(90deg,var(--green),#4ADE80)}
+        .feature-card:nth-child(5)::after{background:linear-gradient(90deg,var(--purple),#C084FC)}
+        .feature-card:nth-child(6)::after{background:linear-gradient(90deg,var(--cyan),#22D3EE)}
+        .feature-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px}
+        .feature-icon.orange{background:rgba(245,158,11,0.12)}.feature-icon.blue{background:rgba(59,130,246,0.12)}.feature-icon.green{background:rgba(34,197,94,0.12)}.feature-icon.red{background:rgba(239,68,68,0.12)}.feature-icon.purple{background:rgba(168,85,247,0.12)}.feature-icon.cyan{background:rgba(6,182,212,0.12)}
+        .feature-card h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
+        .feature-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.6}
+        .drivers{padding:80px 0}
+        .drivers-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+        .driver-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px 32px}
+        .driver-card .tag{display:inline-block;padding:6px 16px;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:16px}
+        .driver-card.owner .tag{background:rgba(245,158,11,0.12);color:var(--accent)}
+        .driver-card.company .tag{background:rgba(59,130,246,0.12);color:var(--blue)}
+        .driver-card h3{font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:12px}
+        .driver-card>p{font-size:0.9rem;color:var(--text-muted);line-height:1.7;margin-bottom:20px}
+        .feature-list{list-style:none;padding:0;margin:0}
+        .feature-list li{display:flex;align-items:flex-start;gap:10px;font-size:0.85rem;color:var(--text-muted);padding:8px 0;border-top:1px solid var(--border)}
+        .feature-list li:first-child{border-top:none}
+        .feature-list svg{width:16px;height:16px;flex-shrink:0;margin-top:2px}
+        .driver-card.owner .feature-list svg{color:var(--accent)}
+        .driver-card.company .feature-list svg{color:var(--blue)}
+        .story-section{padding:80px 0}
+        .story-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:48px 40px;display:flex;gap:40px;align-items:center}
+        .story-icon{flex-shrink:0;width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent-glow),var(--accent-glow-strong));border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:36px}
+        .story-content{flex:1}
+        .story-content blockquote{font-size:1.1rem;line-height:1.7;color:var(--text);font-style:italic;margin-bottom:16px}
+        .story-content .attribution{font-size:0.9rem;color:var(--accent);font-weight:600}
+        .story-content .attribution span{color:var(--text-muted);font-weight:400}
+        .faq-section{padding:80px 0}
+        .faq-list{max-width:680px;margin:0 auto}
+        .faq-item{border-bottom:1px solid var(--border)}
+        .faq-item:first-child{border-top:1px solid var(--border)}
+        .faq-question{width:100%;background:none;border:none;color:var(--text);font-family:inherit;font-size:1rem;font-weight:600;text-align:left;padding:20px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color 0.2s}
+        .faq-question:hover{color:var(--accent)}
+        .faq-chevron{width:20px;height:20px;flex-shrink:0;color:var(--text-muted);transition:transform 0.3s,color 0.2s}
+        .faq-item.open .faq-chevron{transform:rotate(180deg);color:var(--accent)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s ease}
+        .faq-item.open .faq-answer{max-height:300px;padding-bottom:20px}
+        .faq-answer p{font-size:0.9rem;color:var(--text-muted);line-height:1.7}
+        .cta-section{padding:80px 0;text-align:center}
+        .cta-box{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:64px 40px;position:relative;overflow:hidden}
+        .cta-box::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,var(--accent-glow),transparent 70%);pointer-events:none}
+        .cta-box h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:16px;position:relative}
+        .cta-box p{color:var(--text-muted);margin-bottom:32px;font-size:1.05rem;position:relative}
+        .cta-box .signup-form{position:relative}.cta-box .signup-msg{position:relative}
+        footer{padding:40px 0;border-top:1px solid var(--border)}
+        .footer-inner{display:flex;align-items:center;justify-content:space-between}
+        .footer-copy{font-size:0.85rem;color:var(--text-muted)}
+        .footer-links{display:flex;gap:24px}
+        .footer-links a{color:var(--text-muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s}
+        .footer-links a:hover{color:var(--text)}
+        @media(max-width:768px){.phone-strip{gap:16px}.phone-mock{width:180px}.phone-mock-inner{min-height:280px;padding:16px 12px}.phone-mock:nth-child(3){display:none}.story-card{flex-direction:column;text-align:center;padding:36px 28px;gap:24px}}
+        @media(max-width:640px){.hero{padding:60px 0 40px}.nav-links{display:none}.menu-toggle{display:block}.drivers-grid{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr;gap:8px}.steps-grid::before,.steps-grid::after{display:none}.step{padding:20px 24px}.footer-inner{flex-direction:column;gap:16px}.cta-box{padding:48px 24px}.trust-line{flex-direction:column;gap:8px}.signup-form{flex-direction:column}.signup-form .btn-primary{justify-content:center}.phone-strip{flex-direction:column;align-items:center;gap:20px}.phone-mock{width:260px}.phone-mock:nth-child(3){display:flex}.phone-mock-inner{min-height:auto}}
+    </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/contact.html">Contact</a>
+</div>
+<div class="container">
+    <nav aria-label="Main navigation">
+        <a href="/" class="logo">
+            <div class="logo-icon" aria-hidden="true">🚛</div>
+            <span class="logo-text">Trucker's Budget</span>
+        </a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+    </nav>
+</div>
+<main id="main">
+<section class="hero">
+    <div class="container">
+        <div class="badge fade-in"><span class="badge-dot" aria-hidden="true"></span> Coming Soon to iOS</div>
+        <h1 class="fade-in d1">Track Your Miles.<br><span class="highlight">Master Your Money.</span></h1>
+        <p class="hero-sub fade-in d2">The all-in-one expense, income, and mileage tracker built specifically for truck drivers. Whether you're an owner-operator or company driver.</p>
+        <form class="signup-form fade-in d3" id="heroSignup" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <input type="email" name="email" placeholder="Enter your email" required autocomplete="email" aria-label="Email address">
+            <button type="submit" class="btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Notify Me
+            </button>
+        </form>
+        <div class="signup-msg fade-in d3" id="heroMsg"></div>
+        <div class="hero-buttons fade-in d4">
+            <a href="#features" class="btn-secondary">See Features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+        </div>
+        <div class="trust-line fade-in d5">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No ads</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No data selling</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> You own your data</span>
+        </div>
+    </div>
+</section>
+<section class="preview-section">
+    <div class="container">
+        <div class="phone-strip">
+            <div class="phone-mock fade-in d2">
+                <div class="phone-notch"></div>
+                <div class="phone-mock-inner">
+                    <div class="mock-header">Dashboard</div>
+                    <div class="mock-stat"><div class="num">$8,420</div><div class="unit">This Month's Net</div></div>
+                    <div class="mock-row"><span class="label">Gross Income</span><span class="value positive">$12,860</span></div>
+                    <div class="mock-row"><span class="label">Expenses</span><span class="value">$4,440</span></div>
+                    <div class="mock-row"><span class="label">Miles</span><span class="value">6,230</span></div>
+                    <div class="mock-row"><span class="label">Cost / Mile</span><span class="value">$0.71</span></div>
+                </div>
+                <div class="phone-home"></div>
+                <div class="phone-caption">Dashboard</div>
+            </div>
+            <div class="phone-mock fade-in d3">
+                <div class="phone-notch"></div>
+                <div class="phone-mock-inner">
+                    <div class="mock-header">Expenses</div>
+                    <div class="mock-title">This Week</div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-muted);margin-bottom:6px;"><span>Category</span><span>Amount</span></div>
+                    <div class="mock-row"><span class="label">⛽ Fuel</span><span class="value">$892</span></div>
+                    <div class="mock-row"><span class="label">🍔 Meals</span><span class="value">$168</span></div>
+                    <div class="mock-row"><span class="label">🔧 Maintenance</span><span class="value">$340</span></div>
+                    <div class="mock-row"><span class="label">📱 Phone</span><span class="value">$45</span></div>
+                    <div class="mock-row"><span class="label">🏨 Lodging</span><span class="value">$210</span></div>
+                </div>
+                <div class="phone-home"></div>
+                <div class="phone-caption">Expenses</div>
+            </div>
+            <div class="phone-mock fade-in d4">
+                <div class="phone-notch"></div>
+                <div class="phone-mock-inner">
+                    <div class="mock-header">Active Trip</div>
+                    <div class="mock-stat"><div class="num">347 mi</div><div class="unit">Chicago → Detroit</div></div>
+                    <div class="mock-row"><span class="label">Duration</span><span class="value">5h 12m</span></div>
+                    <div class="mock-row"><span class="label">Avg Speed</span><span class="value">62 mph</span></div>
+                    <div class="mock-row"><span class="label">Status</span><span><span class="mock-chip green">Tracking</span></span></div>
+                    <div style="margin-top:12px;"><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:6px;">Route Progress</div><div class="mock-bar" style="position:relative;height:10px;"><div class="mock-bar fill-green" style="position:absolute;top:0;left:0;width:72%;height:100%;border-radius:4px;"></div></div></div>
+                </div>
+                <div class="phone-home"></div>
+                <div class="phone-caption">Trip Tracking</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="container">
+        <div class="section-label">Simple as 1-2-3</div>
+        <h2 class="section-title">How it works</h2>
+        <p class="section-subtitle">No complicated setup. Just open the app and start tracking.</p>
+        <div class="steps-grid">
+            <div class="step"><div class="step-number">1</div><h3>Track</h3><p>Log income, expenses, and mileage as you drive. GPS handles trip tracking automatically.</p></div>
+            <div class="step"><div class="step-number">2</div><h3>Organize</h3><p>Categorize every dollar. Snap receipts. Keep your truck and trailer maintenance on schedule.</p></div>
+            <div class="step"><div class="step-number">3</div><h3>Export</h3><p>Generate PDF and CSV reports. See smart insights. Be ready for tax season without the scramble.</p></div>
+        </div>
+    </div>
+</section>
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-label">Everything You Need</div>
+        <h2 class="section-title">Built for the road</h2>
+        <p class="section-subtitle">Every tool a truck driver needs to manage money — in one app.</p>
+        <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon orange" aria-hidden="true">💰</div><h3>Income Tracking</h3><p>Log loads and settlements for 1099, or paychecks for W-2. See your earnings by week, month, or year.</p></div>
+            <div class="feature-card"><div class="feature-icon red" aria-hidden="true">📊</div><h3>Expense Management</h3><p>Track fuel, maintenance, meals, and every deductible expense. Categorize and filter with ease.</p></div>
+            <div class="feature-card"><div class="feature-icon blue" aria-hidden="true">📍</div><h3>GPS Trip Tracking</h3><p>Start a trip and let the app record your route and mileage automatically with background GPS.</p></div>
+            <div class="feature-card"><div class="feature-icon green" aria-hidden="true">🔧</div><h3>Maintenance Log</h3><p>Track services for your truck and trailer. Log costs, mileage, and never miss a maintenance window.</p></div>
+            <div class="feature-card"><div class="feature-icon purple" aria-hidden="true">📷</div><h3>Receipt Scanner</h3><p>Snap photos of receipts and settlements. Store them digitally so nothing gets lost in the cab.</p></div>
+            <div class="feature-card"><div class="feature-icon cyan" aria-hidden="true">📄</div><h3>Reports &amp; Export</h3><p>Generate detailed PDF and CSV reports. Smart insights help you spot trends and save money.</p></div>
+        </div>
+    </div>
+</section>
+<section class="drivers">
+    <div class="container">
+        <div class="section-label">Two Modes, One App</div>
+        <h2 class="section-title">Built for how you drive</h2>
+        <p class="section-subtitle">Whether you run your own authority or drive for a company, we've got you.</p>
+        <div class="drivers-grid">
+            <div class="driver-card owner">
+                <span class="tag">1099 Owner-Operator</span>
+                <h3>Run your own numbers</h3>
+                <p>Track loads, settlements, per-mile costs, recurring expenses, and generate tax-ready reports.</p>
+                <ul class="feature-list">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Load &amp; settlement tracking</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Per-mile cost breakdown</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> GPS mileage tracking</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Recurring expenses</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Tax-ready reports</li>
+                </ul>
+            </div>
+            <div class="driver-card company">
+                <span class="tag">W-2 Company Driver</span>
+                <h3>Know what you keep</h3>
+                <p>Log paychecks, track per diem, manage work trips, and understand your real take-home.</p>
+                <ul class="feature-list">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Paycheck logging</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Per diem tracking</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Work trip logs</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Work day tracking</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Take-home reports</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="story-section">
+    <div class="container">
+        <div class="story-card">
+            <div class="story-icon" aria-hidden="true">🛣️</div>
+            <div class="story-content">
+                <blockquote>"I built Trucker's Budget because I couldn't find a simple app that tracked what actually matters on the road — miles, loads, fuel, and what I'm taking home. No bloat, no upsells, just the tools drivers actually need."</blockquote>
+                <div class="attribution">The Developer <span>— Built in Michigan, for the road</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq-section" id="faq">
+    <div class="container">
+        <div class="section-label">Common Questions</div>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">Quick answers to what drivers ask most.</p>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Is Trucker's Budget free?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-answer"><p>The app will offer core tracking features for free. Some advanced features like detailed reports and insights may require a subscription — pricing will be clearly shown before any purchase.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Does the app work for both 1099 and W-2 drivers?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-answer"><p>Yes. You choose your driver type when you set up the app. Owner-operators (1099) get load tracking, settlement logging, and per-mile costs. Company drivers (W-2) get paycheck tracking, per diem, and work trip logs.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Is my data safe?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-answer"><p>Your data is encrypted in transit and stored securely via Apple iCloud and Firebase. We never sell your data, we don't run ads, and we don't use third-party analytics trackers. You can delete your account and all data at any time.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Does GPS tracking drain my battery?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-answer"><p>The app uses efficient background location tracking that's optimized for long-haul drives. GPS is only active during a trip — it turns off completely when you end the trip.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Can I export my data for tax season?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-answer"><p>Yes. You can generate detailed PDF and CSV reports for any time period — by week, month, quarter, or year. These reports are designed to make tax prep straightforward, though we always recommend consulting a tax professional.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Is it available on Android?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-answer"><p>Trucker's Budget is currently being built for iOS. Android is on the roadmap but not yet available. Drop your email above to get notified about future platform support.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Stop guessing. Start tracking.</h2>
+            <p>Be the first to know when Trucker's Budget hits the App Store.</p>
+            <form class="signup-form" id="ctaSignup" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                <input type="email" name="email" placeholder="Enter your email" required autocomplete="email" aria-label="Email address">
+                <button type="submit" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Notify Me
+                </button>
+            </form>
+            <div class="signup-msg" id="ctaMsg"></div>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-copy">© 2026 Trucker's Budget. All rights reserved.</span>
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(o) {
+            o.classList.remove('open');
+            o.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+            item.classList.add('open');
+            this.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
+
+// Mobile menu
+var menuToggle = document.getElementById('menuToggle');
+var mobileNav = document.getElementById('mobileNav');
+var mobileNavClose = document.getElementById('mobileNavClose');
+
+function openMenu() {
+    mobileNav.classList.add('open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    mobileNav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+}
+
+menuToggle.addEventListener('click', function() {
+    if (mobileNav.classList.contains('open')) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
+
+mobileNavClose.addEventListener('click', closeMenu);
+
+mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMenu);
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+        closeMenu();
+        menuToggle.focus();
+    }
+});
+
+// Email signup
+function handleSignup(form, msgEl) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var emailInput = form.querySelector('input[type="email"]');
+        var email = emailInput.value.trim();
+        var btn = form.querySelector('button[type="submit"]');
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!email || !re.test(email)) {
+            msgEl.textContent = 'Please enter a valid email address.';
+            msgEl.className = 'signup-msg error';
+            return;
+        }
+
+        btn.disabled = true;
+        var origHTML = btn.innerHTML;
+        btn.textContent = 'Sending...';
+        msgEl.textContent = '';
+        msgEl.className = 'signup-msg';
+
+        fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ email: email })
+        }).then(function(res) {
+            if (res.ok) {
+                msgEl.textContent = "You're on the list! We'll notify you at launch.";
+                msgEl.className = 'signup-msg success';
+                emailInput.value = '';
+            } else {
+                throw new Error('fail');
+            }
+        }).catch(function() {
+            msgEl.textContent = 'Something went wrong. Try again or email support@truckersbudget.com';
+            msgEl.className = 'signup-msg error';
+        }).then(function() {
+            btn.disabled = false;
+            btn.innerHTML = origHTML;
+        });
+    });
+}
+
+handleSignup(document.getElementById('heroSignup'), document.getElementById('heroMsg'));
+handleSignup(document.getElementById('ctaSignup'), document.getElementById('ctaMsg'));
+</script>
+</body>
+</html>

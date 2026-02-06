@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Trucker's Budget</title>
+    <meta name="description" content="Get in touch with the Trucker's Budget team. We'd love to hear from you.">
+    <link rel="canonical" href="https://truckersbudget.com/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://truckersbudget.com/contact.html">
+    <meta property="og:title" content="Contact Us — Trucker's Budget">
+    <meta property="og:description" content="Get in touch with the Trucker's Budget team. We'd love to hear from you.">
+    <meta property="og:site_name" content="Trucker's Budget">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0C0F14;
+            --surface: #151921;
+            --border: #2A3040;
+            --border-hover: #3D4A60;
+            --text: #E8ECF4;
+            --text-muted: #8892A6;
+            --accent: #F59E0B;
+            --accent-hover: #FBBF24;
+            --accent-glow: rgba(245, 158, 11, 0.15);
+            --accent-glow-strong: rgba(245, 158, 11, 0.25);
+            --green: #22C55E;
+            --red: #EF4444;
+        }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+        .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent); color: #000; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; z-index: 1000; text-decoration: none; transition: top 0.2s; }
+        .skip-link:focus { top: 16px; }
+        *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+        nav { max-width: 960px; margin: 0 auto; padding: 24px 24px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent), #D97706); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .logo-text { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--text); }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--text); }
+        .page-header { padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+        .page-header h1 { font-family: 'DM Serif Display', serif; font-size: 2.2rem; margin-bottom: 8px; }
+        .page-header p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
+
+        /* FORM STYLES */
+        .contact-form { max-width: 100%; }
+        .form-group { margin-bottom: 24px; }
+        .form-group label {
+            display: block; font-size: 0.9rem; font-weight: 600;
+            color: var(--text); margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; background: var(--surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 14px 18px; font-family: inherit;
+            font-size: 1rem; color: var(--text); outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: var(--text-muted); }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+        .form-group textarea { resize: vertical; min-height: 140px; }
+        .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238892A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 44px; }
+        .form-group select option { background: var(--surface); color: var(--text); }
+
+        .btn-submit {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--accent); color: #000; padding: 16px 36px;
+            border-radius: 12px; font-weight: 600; font-size: 1rem;
+            text-decoration: none; border: none; cursor: pointer;
+            font-family: inherit;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 0 50px var(--accent-glow-strong); background: var(--accent-hover); }
+        .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .btn-submit svg { width: 18px; height: 18px; }
+
+        .form-msg { margin-top: 16px; font-size: 0.9rem; min-height: 24px; }
+        .form-msg.success { color: var(--green); }
+        .form-msg.error { color: var(--red); }
+
+        /* EMAIL FALLBACK */
+        .email-alt {
+            margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border);
+            color: var(--text-muted); font-size: 0.9rem;
+        }
+        .email-alt a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .email-alt a:hover { text-decoration: underline; }
+
+        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); }
+        .footer-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+        .footer-copy { font-size: 0.85rem; color: var(--text-muted); }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+            .page-header h1 { font-size: 1.8rem; }
+            .footer-inner { flex-direction: column; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <nav aria-label="Main navigation">
+        <a href="/" class="logo">
+            <div class="logo-icon" aria-hidden="true">🚛</div>
+            <span class="logo-text">Trucker's Budget</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/contact.html" aria-current="page">Contact</a>
+        </div>
+    </nav>
+    <main id="main">
+    <div class="container">
+        <div class="page-header">
+            <h1>Contact Us</h1>
+            <p>Have a question, suggestion, or found a bug? We'd love to hear from you.</p>
+        </div>
+        <div class="content">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic" required>
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="General Question">General Question</option>
+                        <option value="Bug Report">Bug Report</option>
+                        <option value="Feature Request">Feature Request</option>
+                        <option value="Account Issue">Account Issue</option>
+                        <option value="Subscription / Billing">Subscription / Billing</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    Send Message
+                </button>
+                <div class="form-msg" id="formMsg"></div>
+            </form>
+            <div class="email-alt">
+                <p>Prefer email? Reach us directly at <a href="mailto:support@truckersbudget.com">support@truckersbudget.com</a></p>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-copy">&copy; 2026 Trucker's Budget. All rights reserved.</span>
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    var form = document.getElementById('contactForm');
+    var msgEl = document.getElementById('formMsg');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var name = form.querySelector('#name').value.trim();
+        var email = form.querySelector('#email').value.trim();
+        var topic = form.querySelector('#topic').value;
+        var message = form.querySelector('#message').value.trim();
+        var btn = form.querySelector('.btn-submit');
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name) { msgEl.textContent = 'Please enter your name.'; msgEl.className = 'form-msg error'; return; }
+        if (!email || !re.test(email)) { msgEl.textContent = 'Please enter a valid email.'; msgEl.className = 'form-msg error'; return; }
+        if (!topic) { msgEl.textContent = 'Please select a topic.'; msgEl.className = 'form-msg error'; return; }
+        if (!message) { msgEl.textContent = 'Please enter a message.'; msgEl.className = 'form-msg error'; return; }
+
+        btn.disabled = true;
+        var origHTML = btn.innerHTML;
+        btn.textContent = 'Sending...';
+        msgEl.textContent = '';
+        msgEl.className = 'form-msg';
+
+        fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ name: name, email: email, topic: topic, message: message })
+        }).then(function(res) {
+            if (res.ok) {
+                msgEl.textContent = "Message sent! We'll get back to you soon.";
+                msgEl.className = 'form-msg success';
+                form.reset();
+            } else {
+                throw new Error('fail');
+            }
+        }).catch(function() {
+            msgEl.textContent = 'Something went wrong. Try emailing support@truckersbudget.com directly.';
+            msgEl.className = 'form-msg error';
+        }).then(function() {
+            btn.disabled = false;
+            btn.innerHTML = origHTML;
+        });
+    });
+    </script>
+</body>
+</html>

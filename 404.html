@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — Trucker's Budget</title>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var normalized = path.replace(/\/+$/, '').toLowerCase();
+            var base = normalized.replace(/\.html$/, '');
+            var pages = ['/privacy', '/terms', '/contact'];
+            if (pages.indexOf(base) !== -1 && path !== base + '.html') {
+                window.location.replace(base + '.html');
+            }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0C0F14; --text: #E8ECF4; --text-muted: #8892A6; --accent: #F59E0B; }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--bg); color: var(--text); display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+        *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+        h1 { font-family: 'DM Serif Display', serif; font-size: 2rem; margin-bottom: 12px; }
+        p { color: var(--text-muted); margin-bottom: 24px; }
+        a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Page not found</h1>
+        <p>The page you're looking for doesn't exist.</p>
+        <a href="/">← Back to Home</a>
+    </main>
+</body>
+</html>

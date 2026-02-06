@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://truckersbudget.com/sitemap.xml

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Trucker's Budget</title>
+    <meta name="description" content="Privacy Policy for Trucker's Budget — how we collect, use, and protect your data.">
+    <link rel="canonical" href="https://truckersbudget.com/privacy.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://truckersbudget.com/privacy.html">
+    <meta property="og:title" content="Privacy Policy — Trucker's Budget">
+    <meta property="og:description" content="Privacy Policy for Trucker's Budget — how we collect, use, and protect your data.">
+    <meta property="og:site_name" content="Trucker's Budget">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0C0F14;
+            --surface: #151921;
+            --border: #2A3040;
+            --text: #E8ECF4;
+            --text-muted: #8892A6;
+            --accent: #F59E0B;
+        }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+        .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent); color: #000; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; z-index: 1000; text-decoration: none; transition: top 0.2s; }
+        .skip-link:focus { top: 16px; }
+        *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+        nav { max-width: 960px; margin: 0 auto; padding: 24px 24px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent), #D97706); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .logo-text { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--text); }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--text); }
+        .page-header { padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+        .page-header h1 { font-family: 'DM Serif Display', serif; font-size: 2.2rem; margin-bottom: 8px; }
+        .page-header .updated { color: var(--text-muted); font-size: 0.9rem; }
+        .content h2 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; margin: 40px 0 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+        .content h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+        .content h3 { font-size: 1rem; font-weight: 600; margin: 24px 0 8px; color: var(--accent); }
+        .content p { color: var(--text-muted); margin-bottom: 12px; }
+        .content ul { color: var(--text-muted); margin: 8px 0 16px 20px; }
+        .content li { margin-bottom: 6px; }
+        .content strong { color: var(--text); font-weight: 600; }
+        .content a { color: var(--accent); text-decoration: none; }
+        .content a:hover { text-decoration: underline; }
+        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); }
+        .footer-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+        .footer-copy { font-size: 0.85rem; color: var(--text-muted); }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+        @media (max-width: 640px) { .nav-links { display: none; } .page-header h1 { font-size: 1.8rem; } .footer-inner { flex-direction: column; gap: 16px; } }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <nav aria-label="Main navigation">
+        <a href="/" class="logo">
+            <div class="logo-icon" aria-hidden="true">🚛</div>
+            <span class="logo-text">Trucker's Budget</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/privacy.html" aria-current="page">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main id="main">
+    <div class="container">
+        <div class="page-header">
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last Updated: February 3, 2026</p>
+        </div>
+        <div class="content">
+            <h2>Introduction</h2>
+            <p>Trucker's Budget ("we," "our," or "the app") is a trucking expense, income, and mileage tracking application designed for both owner-operators (1099) and company drivers (W-2). This Privacy Policy explains how we collect, use, and protect your information when you use our app.</p>
+
+            <h2>Data Controller</h2>
+            <p>Trucker's Budget is developed and operated by its independent developer based in the State of Michigan, United States. For data protection purposes, we are the controller of the personal data collected through the app. If you have questions about how your data is handled, please contact us at <a href="/cdn-cgi/l/email-protection#0d7e787d7d627f794d797f786e66687f7e6f78696a6879236e6260"><span class="__cf_email__" data-cfemail="9cefe9ececf3eee8dce8eee9fff7f9eeeffee9f8fbf9e8b2fff3f1">[email&#160;protected]</span></a>.</p>
+
+            <h2>Information We Collect</h2>
+
+            <h3>Account Information</h3>
+            <p>When you create an account, we collect:</p>
+            <ul>
+                <li>Email address and password (for email/password sign-in)</li>
+                <li>Name and profile photo (if you choose to provide them)</li>
+                <li>Authentication data from third-party providers if you sign in with Apple or Google (we receive only your name and email, not your password from these providers)</li>
+            </ul>
+
+            <h3>Location Data</h3>
+            <p>We collect location data to track trip mileage. Specifically:</p>
+            <ul>
+                <li>GPS coordinates during active trip tracking</li>
+                <li>Trip route points (start location, end location, and waypoints)</li>
+                <li>Background location data while a trip is in progress</li>
+            </ul>
+            <p>Location data is collected only when you actively start a trip. We do not track your location at any other time. You can stop location tracking at any time by ending your trip. Location tracking is not used for W-2 company drivers.</p>
+
+            <h3>Background Location Use</h3>
+            <p>When you start a trip, the app uses background location access to continuously record your route and calculate mileage, even while the app is not in the foreground. This is necessary for accurate trip tracking while driving. Background location access is used <strong>solely</strong> for mileage tracking during an active trip. It is never used for advertising, analytics, or any purpose other than recording your trip. You can revoke background location permission at any time in your device's Settings, and you can end any active trip within the app to immediately stop location collection.</p>
+
+            <h3>Financial and Work Data</h3>
+            <p>Information you enter into the app, including:</p>
+            <ul>
+                <li>Load and income records (1099 drivers)</li>
+                <li>Paycheck records (W-2 drivers)</li>
+                <li>Expense entries and categories</li>
+                <li>W-2 trip logs and per diem tracking</li>
+                <li>Work day records</li>
+                <li>Vehicle information (truck and trailer details, mileage)</li>
+                <li>Maintenance and service records</li>
+            </ul>
+
+            <h3>Documents and Images</h3>
+            <ul>
+                <li>Receipt images captured via the camera or imported from your photo library</li>
+                <li>Settlement documents scanned or imported for income tracking</li>
+                <li>Profile photos</li>
+            </ul>
+            <p>We access your camera and photo library only when you initiate these actions. Scanned receipts and documents are stored locally on your device.</p>
+
+            <h3>Device Information</h3>
+            <ul>
+                <li>Device type and operating system version</li>
+                <li>Crash logs and performance data (via Firebase Crashlytics)</li>
+                <li>Push notification tokens for app functionality (reminders, trip alerts)</li>
+            </ul>
+
+            <h2>How We Use Your Information</h2>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide core functionality: expense tracking, income tracking, trip mileage tracking, maintenance logging, and financial reporting</li>
+                <li>Generate reports, charts, and smart insights based on your data</li>
+                <li>Enable PDF and CSV export of your financial records</li>
+                <li>Authenticate your identity and secure your account</li>
+                <li>Sync your data across your devices via iCloud (CloudKit) and Firebase/Firestore</li>
+                <li>Send transactional emails (email verification, password reset)</li>
+                <li>Send local notifications (work day reminders, trip reminders, maintenance alerts)</li>
+                <li>Improve app stability through crash reporting</li>
+            </ul>
+            <p>We do not use your data for advertising. We do not sell your data to third parties. We do not share your financial data with any third party.</p>
+
+            <h2>Data Storage and Security</h2>
+            <ul>
+                <li>Account credentials are managed by Firebase Authentication (operated by Google). Passwords are hashed and never stored in plain text.</li>
+                <li>App data is stored locally on your device using SwiftData and synced to the cloud via Apple's iCloud (CloudKit) and Google's Firestore.</li>
+                <li>Sensitive credentials on your device are stored in the iOS Keychain, protected by hardware-level encryption and biometric access controls (Face ID / Touch ID).</li>
+                <li>Receipt images and scanned documents are stored locally on your device.</li>
+                <li>Profile images are stored in Firebase Storage.</li>
+                <li>All data transmitted between the app and our cloud services is encrypted in transit using TLS/SSL.</li>
+                <li>The app supports biometric lock (Face ID / Touch ID) for additional security.</li>
+            </ul>
+
+            <h2>Third-Party Services</h2>
+            <p>The app uses the following third-party services, each governed by their own privacy policies:</p>
+            <ul>
+                <li><strong>Firebase Authentication, Firestore, Storage, and Crashlytics</strong> (Google) — for account management, data sync, file storage, and crash reporting. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                <li><strong>Apple iCloud (CloudKit)</strong> — for data sync across your Apple devices. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+                <li><strong>Sign in with Apple</strong> — for authentication. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+                <li><strong>Google Sign-In</strong> — for authentication. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+            </ul>
+            <p>We do not integrate any advertising networks, analytics trackers, or data brokers.</p>
+
+            <h2>Data Retention and Deletion</h2>
+            <p>We retain your data for as long as your account is active. If you delete your account through the app's settings (Settings → Delete Account), we will delete your authentication data, cloud-stored profile information, and associated Firestore records within 30 days. Locally cached data on your device is cleared immediately upon account deletion.</p>
+            <p>Data synced to iCloud via CloudKit is managed by Apple and subject to your iCloud account settings. To fully remove iCloud-synced data, you may also need to manage your iCloud storage through your Apple device settings.</p>
+
+            <h2>Your Rights</h2>
+            <p>You can:</p>
+            <ul>
+                <li><strong>Access</strong> your data at any time within the app</li>
+                <li><strong>Update</strong> your profile information, email, and password through the app's settings</li>
+                <li><strong>Export</strong> your data as PDF or CSV reports using the app's export features</li>
+                <li><strong>Delete</strong> your account and all associated data from within the app (Settings → Delete Account)</li>
+            </ul>
+
+            <h2>US State Privacy Rights</h2>
+            <p>If you are a resident of California, Virginia, Colorado, Connecticut, Utah, or another state with consumer privacy legislation, you may have additional rights regarding your personal information, including the right to know what data we collect, the right to delete your data, and the right to opt out of the sale or sharing of personal information.</p>
+            <p>We do not sell or share your personal information with third parties for advertising or marketing purposes. We do not use your data for profiling or automated decision-making. To exercise any of your rights, you can use the in-app account controls described above or contact us at <a href="/cdn-cgi/l/email-protection#b4c7c1c4c4dbc6c0f4c0c6c1d7dfd1c6c7d6c1d0d3d1c09ad7dbd9"><span class="__cf_email__" data-cfemail="ef9c9a9f9f809d9baf9b9d9a8c848a9d9c8d9a8b888a9bc18c8082">[email&#160;protected]</span></a>. We will respond to verifiable requests within the timeframe required by applicable law.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>Trucker's Budget is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us so we can remove it.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the updated policy within the app or on our website. Your continued use of the app after changes are posted constitutes your acceptance of the updated policy.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have questions about this Privacy Policy, please contact us at:</p>
+            <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#91e2e4e1e1fee3e5d1e5e3e4f2faf4e3e2f3e4f5f6f4e5bff2fefc"><span class="__cf_email__" data-cfemail="f2818782829d8086b28680879199978081908796959786dc919d9f">[em
