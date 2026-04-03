@@ -189,16 +189,17 @@
             <p>We do not integrate any advertising networks, analytics trackers, or data brokers.</p>
 
             <h2>Data Retention and Deletion</h2>
-            <p>We retain your data for as long as your account is active. If you delete your account through the app's settings (Settings → Delete Account), we will delete your authentication data, cloud-stored profile information, and associated Firestore records within 30 days. Locally cached data on your device is cleared immediately upon account deletion.</p>
-            <p>Data synced to iCloud via CloudKit is managed by Apple and subject to your iCloud account settings. To fully remove iCloud-synced data, you may also need to manage your iCloud storage through your Apple device settings.</p>
-
+            <p>We retain your data for as long as your account is active. If you delete your account through the app's settings (Settings → Account Settings → Sign-In & Security → Delete Account), we will immediately delete your Firebase authentication credentials and profile picture.</p>
+            <p>Your session is cleared automatically on every logout. No session data is retained between logins.</p>
+            <p>Financial data, trip records, and app data stored locally via SwiftData and synced via iCloud (CloudKit) is stored in your own iCloud account — to fully remove this data, manage your iCloud storage through your Apple device settings.</p>
+            
             <h2>Your Rights</h2>
             <p>You can:</p>
             <ul>
                 <li><strong>Access</strong> your data at any time within the app</li>
                 <li><strong>Update</strong> your profile information, email, and password through the app's settings</li>
                 <li><strong>Export</strong> your data as PDF or CSV reports using the app's export features</li>
-                <li><strong>Delete</strong> your account and all associated data from within the app (Settings → Delete Account)</li>
+                <li><strong>Delete</strong> your account and all associated data from within the app (Settings → Account Settings → Sign-In & Security → Delete Account)</li>
             </ul>
 
             <h2>US State Privacy Rights</h2>
