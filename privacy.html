@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Truckers Budget</title>
-    <meta name="description" content="Privacy Policy for Truckers Budget — how we collect, use, and protect your data.">
+    <meta name="description" content="Privacy Policy for Truckers Budget — how app data is handled, protected, and used to provide trucking recordkeeping features.">
     <link rel="canonical" href="https://truckersbudget.com/privacy.html">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://truckersbudget.com/privacy.html">
     <meta property="og:title" content="Privacy Policy — Truckers Budget">
-    <meta property="og:description" content="Privacy Policy for Truckers Budget — how we collect, use, and protect your data.">
+    <meta property="og:description" content="Privacy Policy for Truckers Budget — how app data is handled, protected, and used to provide trucking recordkeeping features.">
     <meta property="og:site_name" content="Truckers Budget">
 
     <!-- Favicon -->
@@ -85,126 +85,137 @@
     <div class="container">
         <div class="page-header">
             <h1>Privacy Policy</h1>
-            <p class="updated">Last Updated: February 3, 2026</p>
+            <p class="updated">Last Updated: May 29, 2026</p>
         </div>
         <div class="content">
             <h2>Introduction</h2>
-            <p>Truckers Budget™ ("we," "our," or "the app") is a trucking expense, income, and mileage tracking application designed for both owner-operators (1099) and company drivers (W-2). This Privacy Policy explains how we collect, use, and protect your information when you use our app.</p>
+            <p>Truckers Budget™ ("we," "our," or "the app") is a trucking recordkeeping application designed for truck drivers, including owner-operators (1099) and company drivers (W-2). The app helps users track income, expenses, mileage, fuel, maintenance, documents, and reports, including optional IFTA-related recordkeeping features. This Privacy Policy explains how information is handled when you use the app.</p>
 
             <h2>Data Controller</h2>
-            <p>Truckers Budget is developed and operated by Glory Trucking LLC, based in Illinois, United States. For data protection purposes, we are the controller of the personal data collected through the app. If you have questions about how your data is handled, please contact us at <a href="mailto:support@truckersbudget.com">support@truckersbudget.com</a>.</p>
+            <p>Truckers Budget is developed and operated by Glory Trucking LLC, based in Illinois, United States. For account-related information processed through services we operate or configure, such as Firebase Authentication and limited Firebase profile services, we may act as the data controller.</p>
+            <p>Your trucking records, including income, expenses, trips, mileage, fuel, IFTA records, receipts, maintenance records, documents, and reports, are stored locally on your Apple device and may sync through your Apple iCloud account using CloudKit private database technology, if iCloud sync is enabled. These records are controlled by you through your device and Apple account settings.</p>
+            <p>If you have questions about this Privacy Policy, please contact us at <a href="mailto:support@truckersbudget.com">support@truckersbudget.com</a>.</p>
 
-            <h2>Information We Collect</h2>
+            <h2>Information Handled by the App</h2>
 
-            <h3>Account Information</h3>
-            <p>When you create an account, we collect:</p>
-            <ul>
-                <li>Email address and password (for email/password sign-in)</li>
-                <li>Name and profile photo (if you choose to provide them)</li>
-                <li>Phone number (optional, if you choose to provide it for your driver profile)</li>
-                <li>Authentication data from third-party providers if you sign in with Apple or Google (we receive only your name and email, not your password from these providers)</li>
-            </ul>
+            <h3>Account and Profile Information</h3>
+            <p>If you create an account or sign in, Firebase Authentication may process account information needed to authenticate you, such as your email address, authentication provider, user identifier, verification status, sign-in tokens, password reset requests, email verification, and account security information.</p>
+            <p>If you choose to provide profile details, the app may also process limited profile information such as your name, profile photo, phone number, company name, app profile settings, and related account timestamps. This limited profile information may be stored using Firebase Firestore and Firebase Storage for account/profile functionality.</p>
+            <p>Account and profile information is used to let you sign in, secure your account, manage sessions, verify your email, reset your password, sync profile settings where supported, and provide access to app features. We do not use account or profile information for advertising or data selling.</p>
 
-            <h3>Location Data</h3>
-            <p>We collect location data to track trip mileage. Specifically:</p>
-            <ul>
-                <li>GPS coordinates during active trip tracking</li>
-                <li>Trip route points (start location, end location, and waypoints)</li>
-                <li>Background location data while a trip is in progress</li>
-            </ul>
-            <p>Location data is collected only when you actively start a trip. We do not track your location at any other time. You can stop location tracking at any time by ending your trip. Location tracking is not used for W-2 company drivers.</p>
+            <h3>Location, Mileage, Fuel, and IFTA Records</h3>
+            <p>If you use trip tracking, mileage, fuel, or IFTA-related features, the app may process location, mileage, fuel, trip, jurisdiction, receipt, vehicle, and report information on your device to provide those features.</p>
+            <p>This may include GPS coordinates during active trip tracking, route points, start and end locations, jurisdiction/state/province mileage, odometer readings, fuel purchases, gallons, fuel cost, fuel location, receipt details, and IFTA-related summaries or exports.</p>
+            <p>These trucking records are stored locally on your device using Apple platform storage technologies and may sync across your Apple devices through your Apple iCloud account using CloudKit private database technology, if iCloud sync is enabled. We do not read, review, sell, or use your trucking records for advertising.</p>
 
             <h3>Background Location Use</h3>
-            <p>When you start a trip, the app uses background location access to continuously record your route and calculate mileage, even while the app is not in the foreground. This is necessary for accurate trip tracking while driving. Background location access is used <strong>solely</strong> for mileage tracking during an active trip. It is never used for advertising, analytics, or any purpose other than recording your trip. You can revoke background location permission at any time in your device's Settings, and you can end any active trip within the app to immediately stop location collection.</p>
+            <p>When you start a trip, the app may use background location access to continue recording mileage while the app is not in the foreground. This is used to support active trip tracking, route history, mileage records, jurisdiction mileage, and related recordkeeping features.</p>
+            <p>Background location access is used only for active trip tracking and related app functionality. It is not used for advertising, data selling, or tracking you outside of an active trip. You can revoke background location permission at any time in your device settings, and you can end any active trip within the app to stop location recording.</p>
+            <p>If location permission is disabled, interrupted, or unavailable, mileage and jurisdiction records may be incomplete or may require manual correction.</p>
 
-            <h3>Financial and Work Data</h3>
-            <p>Information you enter into the app, including:</p>
+            <h3>Trucking Records Stored on Your Device and Your Apple iCloud Account</h3>
+            <p>The app may allow you to create or process trucking records such as:</p>
             <ul>
-                <li>Load and income records (1099 drivers)</li>
-                <li>Paycheck records (W-2 drivers)</li>
+                <li>Load and income records</li>
+                <li>Paycheck records</li>
                 <li>Expense entries and categories</li>
-                <li>W-2 trip logs and per diem tracking</li>
-                <li>Work day records</li>
-                <li>Vehicle information (truck and trailer details, mileage)</li>
+                <li>Fuel purchases, gallons, fuel cost, fuel location, and receipt details</li>
+                <li>Trip logs, route information, mileage, jurisdiction mileage, and odometer readings</li>
+                <li>IFTA-related summaries, reports, and export data</li>
+                <li>Per diem and work day records</li>
+                <li>Vehicle information, including truck and trailer details and mileage</li>
                 <li>Maintenance and service records</li>
+                <li>Documents, receipts, settlement records, and exported reports</li>
             </ul>
+            <p>These records are used by the app to provide recordkeeping, reports, charts, reminders, summaries, and exports. They are stored locally on your Apple device and may sync through your Apple iCloud account using CloudKit private database technology, if iCloud sync is enabled. We do not have access to these trucking records and do not use them for advertising or data selling.</p>
 
             <h3>Documents and Images</h3>
-            <ul>
-                <li>Receipt images captured via the camera or imported from your photo library</li>
-                <li>Settlement documents scanned or imported for income tracking</li>
-                <li>Profile photos</li>
-            </ul>
-            <p>We access your camera and photo library only when you initiate these actions. Scanned receipts and documents are stored locally on your device.</p>
+            <p>The app may allow you to capture, import, scan, attach, or store documents and images such as receipts, settlement documents, fuel receipts, maintenance receipts, profile images, or other trucking records.</p>
+            <p>Camera and photo library access are used only when you initiate those actions. Trucking documents and receipts are stored locally on your device and may sync through your Apple iCloud account using CloudKit private database technology, if iCloud sync is enabled.</p>
+            <p>If you choose to upload a profile image, the image may be stored using Firebase Storage for account/profile functionality.</p>
 
             <h3>Subscription and Purchase Data</h3>
-            <p>We collect information about your in-app purchases and subscription status, including:</p>
+            <p>The app may process information about your in-app purchases and subscription status, including:</p>
             <ul>
-                <li>Subscription tier (Free or Pro)</li>
+                <li>Subscription tier, such as Free or Pro</li>
                 <li>Purchase date and renewal status</li>
-                <li>Transaction identifiers provided by Apple</li>
+                <li>Transaction identifiers or subscription status information provided by Apple</li>
             </ul>
-            <p>This data is used solely to provide access to Pro features. Purchase transactions are processed and managed by Apple and governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We do not store your payment information.</p>
+            <p>This information is used solely to provide access to paid features. Purchase transactions are processed and managed by Apple and governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We do not store your payment card or banking information.</p>
             
-            <h3>Device Information</h3>
+            <h3>Device and App Functionality Information</h3>
             <ul>
-                <li>Device type and operating system version</li>
-                <li>Push notification tokens for app functionality (reminders, trip alerts)</li>
-                <li>A unique user identifier (User ID) used to associate your data with your account across devices</li>
+                <li>Device type and operating system version, when needed for app compatibility, support, or security</li>
+                <li>Push notification tokens or local notification settings for app functionality, such as reminders and trip alerts, if enabled</li>
+                <li>A unique user identifier used to associate account/profile information with your account</li>
             </ul>
 
-            <h2>How We Use Your Information</h2>
-            <p>We use your information to:</p>
+            <h2>How Information Is Used</h2>
+            <p>Information handled by the app is used to:</p>
             <ul>
-                <li>Provide core functionality: expense tracking, income tracking, trip mileage tracking, maintenance logging, and financial reporting</li>
-                <li>Generate reports, charts, and smart insights based on your data</li>
-                <li>Enable PDF and CSV export of your financial records</li>
-                <li>Authenticate your identity and secure your account</li>
-                <li>Sync your data across your devices via iCloud (CloudKit) and Firebase/Firestore</li>
-                <li>Send transactional emails (email verification, password reset)</li>
-                <li>Send local notifications (work day reminders, trip reminders, maintenance alerts)</li>
-                <li>Improve app stability through Apple's native crash reporting</li>
+                <li>Provide core functionality such as expense tracking, income tracking, trip mileage tracking, fuel tracking, maintenance logging, document storage, and financial reporting</li>
+                <li>Generate mileage, fuel, jurisdiction, IFTA, expense, income, maintenance, and business recordkeeping reports on your device</li>
+                <li>Allow you to export records for your own review, accountant, carrier, tax preparer, or filing workflow</li>
+                <li>Authenticate your identity and secure your account through Firebase Authentication</li>
+                <li>Process limited account/profile information through Firebase services for sign-in, profile, account security, and account management features</li>
+                <li>Sync supported trucking records across your Apple devices through your Apple iCloud account using CloudKit private database technology, if iCloud sync is enabled</li>
+                <li>Send transactional account emails such as email verification and password reset</li>
+                <li>Send local notifications such as work day reminders, trip reminders, and maintenance alerts, if enabled</li>
+                <li>Support app stability and compatibility using Apple platform tools and system-provided diagnostics where available</li>
             </ul>
-            <p>We do not use your data for advertising. We do not sell your data to third parties. We do not share your financial data with any third party.</p>
+            <p>We do not use your trucking records for advertising. We do not sell your data. We do not share your financial, mileage, fuel, receipt, document, or IFTA records with data brokers.</p>
+
+            <h2>Accuracy, User Review, and Recordkeeping</h2>
+            <p>Truckers Budget provides tools to help organize and generate records on your device based on information entered, scanned, imported, tracked, or calculated in the app. Some features may rely on GPS signals, user entries, route estimates, receipt scanning, optical character recognition (OCR), automated calculations, Apple services, or other third-party services.</p>
+            <p>These tools may be inaccurate, incomplete, delayed, or affected by device settings, poor signal, offline use, low battery, missed trip starts, early trip endings, image quality, user input errors, or other real-world conditions. You are responsible for reviewing, correcting, exporting, saving, and retaining any records you need for tax, business, IFTA, IRP, audit, or compliance purposes.</p>
 
             <h2>Data Storage and Security</h2>
             <ul>
-                <li>Account credentials are managed by Firebase Authentication (operated by Google). Passwords are hashed and never stored in plain text.</li>
-                <li>App data is stored locally on your device using SwiftData and synced to the cloud via Apple's iCloud (CloudKit) and Google's Firestore.</li>
-                <li>Sensitive credentials on your device are stored in the iOS Keychain, protected by hardware-level encryption and biometric access controls (Face ID / Touch ID).</li>
-                <li>Receipt images and scanned documents are stored locally on your device.</li>
-                <li>Profile images are stored in Firebase Storage.</li>
-                <li>All data transmitted between the app and our cloud services is encrypted in transit using TLS/SSL.</li>
-                <li>The app supports biometric lock (Face ID / Touch ID) for additional security.</li>
+                <li>Trucking records are stored locally on your Apple device using Apple platform storage technologies, including SwiftData.</li>
+                <li>If iCloud sync is enabled, supported trucking records may sync across your Apple devices through your Apple iCloud account using CloudKit private database technology.</li>
+                <li>Account authentication is handled by Firebase Authentication. Passwords are managed by Firebase Authentication and are not stored by us in plain text.</li>
+                <li>Limited account/profile information may be stored in Firebase Firestore for profile and account management functionality.</li>
+                <li>Profile images, if you choose to upload one, may be stored in Firebase Storage.</li>
+                <li>Sensitive credentials on your device may be stored in the iOS, iPadOS, or macOS Keychain.</li>
+                <li>The app supports biometric lock, such as Face ID or Touch ID, where available.</li>
+                <li>Data transmitted to Apple iCloud/CloudKit, Firebase Authentication, Firestore, Firebase Storage, or Apple App Store services is encrypted in transit according to those services' security practices.</li>
             </ul>
 
             <h2>Third-Party Services</h2>
-            <p>The app uses the following third-party services, each governed by their own privacy policies:</p>
+            <p>The app may use the following third-party services, each governed by their own privacy policies:</p>
             <ul>
-                <li><strong>Firebase Authentication, Firestore, and Storage</strong> (Google) — for account management, data sync, and file storage. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-                <li><strong>Apple iCloud (CloudKit)</strong> — for data sync across your Apple devices. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
-                <li><strong>Sign in with Apple</strong> — for authentication. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
-                <li><strong>Google Sign-In</strong> — for authentication. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                <li><strong>Firebase Authentication</strong> (Google) — for account sign-in, authentication, email verification, password reset, multi-factor authentication, and account security. <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> / <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                <li><strong>Firebase Firestore</strong> (Google) — for limited account/profile information, such as profile details, app profile settings, and account management data. <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> / <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                <li><strong>Firebase Storage</strong> (Google) — for profile image storage, if you choose to upload a profile image. <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> / <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                <li><strong>Apple iCloud (CloudKit)</strong> — for syncing supported trucking records across your Apple devices through your Apple iCloud account, if enabled. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+                <li><strong>Sign in with Apple</strong> — for authentication, if you choose to use it. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+                <li><strong>Google Sign-In</strong> — for authentication, if you choose to use it. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                <li><strong>Apple App Store / StoreKit</strong> — for subscriptions and purchase management. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
             </ul>
-            <p>We do not integrate any advertising networks, analytics trackers, or data brokers.</p>
+            <p>We do not integrate advertising networks, third-party analytics trackers, session recording tools, or data brokers.</p>
 
             <h2>Data Retention and Deletion</h2>
-            <p>We retain your data for as long as your account is active. If you delete your account through the app's settings (Settings → Account Settings → Sign-In & Security → Delete Account), we will immediately delete your Firebase authentication credentials and profile picture.</p>
-            <p>Your session is cleared automatically on every logout. No session data is retained between logins.</p>
-            <p>Financial data, trip records, and app data stored locally via SwiftData and synced via iCloud (CloudKit) is stored in your own iCloud account — to fully remove this data, manage your iCloud storage through your Apple device settings.</p>
-            
+            <p>Trucking records stored locally on your device or synced through your Apple iCloud account using CloudKit private database technology are controlled by you through your device, app, and Apple account settings.</p>
+            <p>Account-related information processed through Firebase Authentication and limited Firebase profile services is retained for as long as your account is active or as needed to provide app functionality, maintain security, resolve disputes, comply with legal obligations, and support legitimate business purposes.</p>
+            <p>If you delete your account through the app's settings (Settings → Delete Account), we will delete your Firebase Authentication account data, cloud-stored profile information, Firebase profile image data, and associated Firebase profile records within 30 days, unless a longer retention period is required or permitted by law. Locally cached profile data on your device is cleared according to the app's deletion process.</p>
+            <p>Data synced to iCloud via CloudKit is managed by Apple and subject to your iCloud account settings. To fully remove iCloud-synced trucking records, you may also need to manage your iCloud storage through your Apple device settings.</p>
+            <p>You are responsible for exporting, saving, and retaining any tax, business, IFTA, IRP, fuel, mileage, receipt, or compliance records you are legally required to keep before deleting your account, uninstalling the app, changing devices, disabling iCloud sync, or removing app data.</p>
+
             <h2>Your Rights</h2>
             <p>You can:</p>
             <ul>
-                <li><strong>Access</strong> your data at any time within the app</li>
-                <li><strong>Update</strong> your profile information, email, and password through the app's settings</li>
-                <li><strong>Export</strong> your data as PDF or CSV reports using the app's export features</li>
-                <li><strong>Delete</strong> your account and all associated data from within the app (Settings → Account Settings → Sign-In & Security → Delete Account)</li>
+                <li><strong>Access</strong> your trucking records at any time within the app</li>
+                <li><strong>Update</strong> your profile information, email, password, and account settings through the app's settings, where supported</li>
+                <li><strong>Export</strong> your records as PDF, CSV, spreadsheet, or other supported reports using the app's export features</li>
+                <li><strong>Control iCloud sync</strong> through your Apple device and iCloud settings</li>
+                <li><strong>Delete</strong> your account and associated Firebase account/profile data from within the app, where supported</li>
             </ul>
 
             <h2>US State Privacy Rights</h2>
-            <p>If you are a resident of California, Virginia, Colorado, Connecticut, Utah, or another state with consumer privacy legislation, you may have additional rights regarding your personal information, including the right to know what data we collect, the right to delete your data, and the right to opt out of the sale or sharing of personal information.</p>
-            <p>We do not sell or share your personal information with third parties for advertising or marketing purposes. We do not use your data for profiling or automated decision-making. To exercise any of your rights, you can use the in-app account controls described above or contact us at <a href="mailto:support@truckersbudget.com">support@truckersbudget.com</a>. We will respond to verifiable requests within the timeframe required by applicable law.</p>
+            <p>Depending on where you live, you may have rights under applicable U.S. state privacy laws regarding personal information we process. These rights may include the right to access, correct, delete, or obtain a copy of certain personal information, and the right to opt out of certain uses such as targeted advertising, the sale of personal information, sharing for cross-context behavioral advertising, or profiling in furtherance of decisions that produce legal or similarly significant effects.</p>
+            <p>Truckers Budget does not sell personal information, does not use your information for targeted advertising, and does not share your trucking records with data brokers. We also do not use personal information to make automated decisions that produce legal or similarly significant effects about you.</p>
+            <p>Trucking records stored locally on your device or synced through your Apple iCloud account are controlled by you through your device, app, and Apple account settings.</p>
+            <p>To exercise any applicable privacy rights, you can use the in-app account controls described above or contact us at <a href="mailto:support@truckersbudget.com">support@truckersbudget.com</a>. We may need to verify your request before responding. We will respond to verifiable requests within the timeframe required by applicable law.</p>
 
             <h2>Children's Privacy</h2>
             <p>Truckers Budget is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us so we can remove it.</p>
@@ -223,7 +234,7 @@
             <span class="footer-copy">© 2026 Truckers Budget™. All rights reserved.</span>
             <div class="footer-links">
                 <a href="/privacy.html">Privacy Policy</a>
-                <a href="/terms.html">Terms of Use</a>
+                <a href="/terms.html">Terms of Service</a>
                 <a href="/contact.html">Contact</a>
             </div>
         </div>
